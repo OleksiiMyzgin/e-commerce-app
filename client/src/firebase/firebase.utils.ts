@@ -8,6 +8,9 @@ import {
   DocData,
   Collections,
   Collection,
+  UserAdditionalData,
+  DocumentReference,
+  UserData,
 } from "../interfaces";
 
 const config = {
@@ -23,8 +26,8 @@ const config = {
 
 export const createUserProfileDocument = async (
   userAuth: FirebaseUser,
-  additionalData: { displayName: string },
-) => {
+  additionalData?: UserAdditionalData,
+): Promise<DocumentReference | undefined> => {
   if (!userAuth) return;
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
@@ -33,14 +36,15 @@ export const createUserProfileDocument = async (
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
+    const userData: UserData = {
+      displayName,
+      email,
+      createdAt,
+      ...additionalData,
+    };
 
     try {
-      await userRef.set({
-        displayName,
-        email,
-        createdAt,
-        ...additionalData,
-      });
+      await userRef.set(userData);
     } catch (e) {
       console.error("error creating user", e.message);
     }
