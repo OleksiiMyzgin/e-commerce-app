@@ -75,7 +75,7 @@ export const convertCollectionsSnapshotToMap = (
   }, {} as { [key: string]: Collection });
 };
 
-export const getCurrentUser = (): Promise<FirebaseUser> => {
+export const getCurrentUser = (): Promise<FirebaseUser | null> => {
   return new Promise((resolve, reject) => {
     const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       unsubscribe();

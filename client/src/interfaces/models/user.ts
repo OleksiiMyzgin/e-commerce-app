@@ -1,7 +1,7 @@
-import { FirebaseUser, FirebaseError } from "../index";
+import { FirebaseError } from "../index";
 
 export type User = {
-  currentUser: FirebaseUser | null;
+  currentUser: UserData | null;
   error: FirebaseError | null;
 };
 
