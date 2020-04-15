@@ -1,8 +1,9 @@
 export type CartItem = {
-  title: string;
-  imageUrl: string;
   id: number;
-  linkUrl: string;
+  price: number;
+  name: string;
+  imageUrl: string;
+  quantity: number;
 };
 
 export type DocData = {
@@ -19,4 +20,9 @@ export type Collection = {
 
 export type Collections = {
   [key: string]: Collection;
+};
+
+export type Cart = {
+  hidden: boolean;
+  cartItems: CartItem[];
 };
