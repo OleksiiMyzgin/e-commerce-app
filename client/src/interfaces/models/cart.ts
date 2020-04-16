@@ -1,4 +1,4 @@
-export type CartItem = {
+export type TCartItem = {
   id: number;
   price: number;
   name: string;
@@ -8,14 +8,14 @@ export type CartItem = {
 
 export type DocData = {
   title: string;
-  items: CartItem[];
+  items: TCartItem[];
 };
 
 export type Collection = {
   routeName: string;
   id: string;
   title: string;
-  items: CartItem[];
+  items: TCartItem[];
 };
 
 export type Collections = {
@@ -24,5 +24,5 @@ export type Collections = {
 
 export type Cart = {
   hidden: boolean;
-  cartItems: CartItem[];
+  cartItems: TCartItem[];
 };
