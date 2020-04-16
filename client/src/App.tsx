@@ -21,7 +21,7 @@ const CheckoutPage = lazy(() => import("./components/checkout"));
 const SignInAndSignUpPage = lazy(() => import("./pages/sign-in-and-sign-up"));
 
 type Props = {
-  checkUserSession(): ReturnType<typeof checkUserSession>;
+  checkUserSession(): void;
   currentUser: UserData | null;
 };
 
