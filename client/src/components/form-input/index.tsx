@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./form-input.styles.scss";
+import { GroupContainer, FormInputContainer, FormInputLabel } from "./styles";
 
 type Props = {
   handleChange?(event: React.ChangeEvent<HTMLInputElement>): void;
@@ -10,26 +10,18 @@ type Props = {
 const FormInput = ({
   handleChange,
   label,
-  ...otherProps
-}: Props & React.AllHTMLAttributes<HTMLInputElement>) => (
-  <div className="group">
-    <input
-      type=""
-      className="form-input"
-      onChange={handleChange}
-      {...otherProps}
-    />
+  ...props
+}: Props & React.InputHTMLAttributes<HTMLInputElement>) => (
+  <GroupContainer>
+    <FormInputContainer onChange={handleChange} {...props} />
     {label ? (
-      <label
-        htmlFor={label}
-        className={`${
-          (otherProps.value as string).length ? "shrink" : ""
-        } form-input-label`}
+      <FormInputLabel
+        className={(props.value as string).length ? "shrink" : ""}
       >
         {label}
-      </label>
+      </FormInputLabel>
     ) : null}
-  </div>
+  </GroupContainer>
 );
 
 export default FormInput;

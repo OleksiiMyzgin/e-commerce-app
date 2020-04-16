@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { Dispatch } from "redux";
 
 import FormInput from "../form-input";
 import CustomButton from "../custom-button";
 
 import { googleSignInStart, emailSignInStart } from "../../redux/user/actions";
 
-import "./sign-in.styles.scss";
-import { Dispatch } from "redux";
+import { SignInContainer, SignInTitle, ButtonsBarContainer } from "./styles";
 
 type Props = {
   emailSignInStart(email: string, password: string): void;
@@ -35,8 +35,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart }: Props) => {
   };
 
   return (
-    <div className="sing-in">
-      <h2 className="title">I already have an account</h2>
+    <SignInContainer>
+      <SignInTitle>I already have an account</SignInTitle>
       <span> Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
@@ -56,7 +56,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }: Props) => {
           handleChange={handleChange}
           required
         />
-        <div className="buttons">
+        <ButtonsBarContainer>
           <CustomButton type="submit">Sign in</CustomButton>
           <CustomButton
             type="button"
@@ -65,9 +65,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart }: Props) => {
           >
             Sign in with Google
           </CustomButton>
-        </div>
+        </ButtonsBarContainer>
       </form>
-    </div>
+    </SignInContainer>
   );
 };
 

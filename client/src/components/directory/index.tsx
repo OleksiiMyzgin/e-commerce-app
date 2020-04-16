@@ -7,18 +7,19 @@ import { RootState, Sections } from "../../interfaces";
 import { selectDirectorySections } from "../../redux/directory/selectors";
 
 import MenuItem from "../menu-item";
-import "./directory.styles.scss";
+
+import { DirectoryMenuContainer } from "./styles";
 
 type Props = {
   sections: Sections[];
 };
 
 const Directory = ({ sections }: Props) => (
-  <div className="directory-menu">
+  <DirectoryMenuContainer>
     {sections.map((section) => (
       <MenuItem key={section.id} {...section} />
     ))}
-  </div>
+  </DirectoryMenuContainer>
 );
 
 type Selector = {

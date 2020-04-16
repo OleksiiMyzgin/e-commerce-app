@@ -17,7 +17,7 @@ import { checkUserSession } from "./redux/user/actions";
 
 const HomePage = lazy(() => import("./pages/homepage"));
 const ShopPage = lazy(() => import("./pages/shop"));
-const CheckoutPage = lazy(() => import("./components/checkout"));
+const CheckoutPage = lazy(() => import("./pages/checkout"));
 const SignInAndSignUpPage = lazy(() => import("./pages/sign-in-and-sign-up"));
 
 type Props = {

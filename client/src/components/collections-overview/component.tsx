@@ -7,18 +7,18 @@ import { RootState, Collection } from "../../interfaces";
 import CollectionPreview from "../collection-preview";
 import { selectCollectionsForPreview } from "../../redux/shop/selectors";
 
-import "./collections-overview.styles.scss";
+import { CollectionsOverviewContainer } from "./styles";
 
 type Props = {
   collections: Collection[];
 };
 
 const CollectionsOverview = ({ collections }: Props): JSX.Element => (
-  <div className="collections-overview">
+  <CollectionsOverviewContainer>
     {collections.map((collection) => (
       <CollectionPreview key={collection.id} {...collection} />
     ))}
-  </div>
+  </CollectionsOverviewContainer>
 );
 
 type Selector = {
