@@ -1,5 +1,5 @@
-import { ShopActionTypes } from "./shop.types";
-import { Action } from "./shop.actions";
+import { ShopActionTypes } from "./action-types";
+import { Action } from "./actions";
 import { Shop } from "../../interfaces";
 
 const INITIAL_STATE: Shop = {

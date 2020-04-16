@@ -5,12 +5,9 @@ import {
   convertCollectionsSnapshotToMap,
 } from "../../firebase/firebase.utils";
 
-import {
-  fetchCollectionsSuccess,
-  fetchCollectionsFailure,
-} from "./shop.actions";
+import { fetchCollectionsSuccess, fetchCollectionsFailure } from "./actions";
 
-import { ShopActionTypes } from "./shop.types";
+import { ShopActionTypes } from "./action-types";
 
 import { QuerySnapshot, Collections } from "../../interfaces";
 

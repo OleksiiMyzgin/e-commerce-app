@@ -1,8 +1,8 @@
-import { CartItem } from "../../interfaces";
+import { TCartItem } from "../../interfaces";
 
 export const addItemToCart = (
-  cartItems: CartItem[],
-  cartItemToAdd: CartItem,
+  cartItems: TCartItem[],
+  cartItemToAdd: TCartItem,
 ) => {
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === cartItemToAdd.id,
@@ -20,8 +20,8 @@ export const addItemToCart = (
 };
 
 export const removeItemToCart = (
-  cartItems: CartItem[],
-  cartItemToRemove: CartItem,
+  cartItems: TCartItem[],
+  cartItemToRemove: TCartItem,
 ) => {
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === cartItemToRemove.id,

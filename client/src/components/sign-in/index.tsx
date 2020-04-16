@@ -4,10 +4,7 @@ import { connect } from "react-redux";
 import FormInput from "../form-input";
 import CustomButton from "../custom-button";
 
-import {
-  googleSignInStart,
-  emailSignInStart,
-} from "../../redux/user/user.actions";
+import { googleSignInStart, emailSignInStart } from "../../redux/user/actions";
 
 import "./sign-in.styles.scss";
 import { Dispatch } from "redux";

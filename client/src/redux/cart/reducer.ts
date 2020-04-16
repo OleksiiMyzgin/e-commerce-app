@@ -1,6 +1,6 @@
-import { CartActionTypes } from "./cart.types";
-import { Action } from "./cart.actions";
-import { addItemToCart, removeItemToCart } from "./cart.utils";
+import { CartActionTypes } from "./action-types";
+import { Action } from "./actions";
+import { addItemToCart, removeItemToCart } from "./utils";
 
 import { Cart } from "../../interfaces";
 

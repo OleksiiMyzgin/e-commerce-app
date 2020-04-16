@@ -1,6 +1,6 @@
-import { CartActionTypes } from "./cart.types";
+import { CartActionTypes } from "./action-types";
 
-import { CartItem } from "../../interfaces";
+import { TCartItem } from "../../interfaces";
 
 export type ToggleCartHidden = {
   type: CartActionTypes.TOGGLE_CART_HIDDEN;
@@ -8,17 +8,17 @@ export type ToggleCartHidden = {
 
 export type AddItem = {
   type: CartActionTypes.ADD_ITEM;
-  payload: CartItem;
+  payload: TCartItem;
 };
 
 export type RemoveItem = {
   type: CartActionTypes.REMOVE_ITEM;
-  payload: CartItem;
+  payload: TCartItem;
 };
 
 export type ClearItemFromCart = {
   type: CartActionTypes.CLEAR_ITEM_FROM_CART;
-  payload: CartItem;
+  payload: TCartItem;
 };
 
 export type ClearCart = {
@@ -29,17 +29,17 @@ export const toggleCartHidden = (): ToggleCartHidden => ({
   type: CartActionTypes.TOGGLE_CART_HIDDEN,
 });
 
-export const addItem = (item: CartItem): AddItem => ({
+export const addItem = (item: TCartItem): AddItem => ({
   type: CartActionTypes.ADD_ITEM,
   payload: item,
 });
 
-export const removeItem = (item: CartItem): RemoveItem => ({
+export const removeItem = (item: TCartItem): RemoveItem => ({
   type: CartActionTypes.REMOVE_ITEM,
   payload: item,
 });
 
-export const clearItemFromCart = (item: CartItem): ClearItemFromCart => ({
+export const clearItemFromCart = (item: TCartItem): ClearItemFromCart => ({
   type: CartActionTypes.CLEAR_ITEM_FROM_CART,
   payload: item,
 });

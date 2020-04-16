@@ -5,8 +5,8 @@ import { Dispatch } from "redux";
 
 import { RootState } from "../../interfaces";
 
-import { toggleCartHidden } from "../../redux/cart/cart.actions";
-import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
+import { toggleCartHidden } from "../../redux/cart/actions";
+import { selectCartItemsCount } from "../../redux/cart/selectors";
 
 import { CartContainer, ShoppingIcon, ItemCountContainer } from "./styles";
 

@@ -7,7 +7,7 @@ import { UserCredentials } from "../../interfaces";
 import FormInput from "../form-input";
 import CustomButton from "../custom-button";
 
-import { signUptStart } from "../../redux/user/user.actions";
+import { signUptStart } from "../../redux/user/actions";
 
 import "./sign-up.styles.scss";
 

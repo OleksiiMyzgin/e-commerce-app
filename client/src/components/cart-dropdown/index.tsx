@@ -7,8 +7,8 @@ import { Dispatch } from "redux";
 import { RootState, TCartItem } from "../../interfaces";
 
 import CartItem from "../cart-item";
-import { selectCartItems } from "../../redux/cart/cart.selectors";
-import { toggleCartHidden } from "../../redux/cart/cart.actions";
+import { selectCartItems } from "../../redux/cart/selectors";
+import { toggleCartHidden } from "../../redux/cart/actions";
 
 import {
   CartDropdownContainer,

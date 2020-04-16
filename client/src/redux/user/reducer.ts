@@ -1,5 +1,5 @@
-import { UserActionTypes } from "./user.types";
-import { Action } from "./user.actions";
+import { UserActionTypes } from "./action-types";
+import { Action } from "./actions";
 
 import { User } from "../../interfaces";
 

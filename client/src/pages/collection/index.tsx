@@ -4,7 +4,7 @@ import { compose } from "redux";
 
 import { RootState } from "../../interfaces";
 
-import { selectIsCollectionsLoaded } from "../../redux/shop/shop.selectors";
+import { selectIsCollectionsLoaded } from "../../redux/shop/selectors";
 import WithSpinner from "../../components/with-spinner/";
 import CollectionPage from "./component";
 

@@ -1,4 +1,4 @@
-import { ShopActionTypes } from "./shop.types";
+import { ShopActionTypes } from "./action-types";
 
 import { Collections, FirebaseError } from "../../interfaces";
 

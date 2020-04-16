@@ -12,8 +12,8 @@ import ErrorBoundary from "./components/error-boundary";
 
 import { GlobalStyle } from "./global.styles";
 
-import { selectCurrentUser } from "./redux/user/user.selectors";
-import { checkUserSession } from "./redux/user/user.actions";
+import { selectCurrentUser } from "./redux/user/selectors";
+import { checkUserSession } from "./redux/user/actions";
 
 const HomePage = lazy(() => import("./pages/homepage"));
 const ShopPage = lazy(() => import("./pages/shop"));

@@ -1,4 +1,4 @@
-import { UserActionTypes } from "./user.types";
+import { UserActionTypes } from "./action-types";
 
 import {
   FirebaseUser,

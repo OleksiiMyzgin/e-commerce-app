@@ -5,7 +5,7 @@ import { RouteComponentProps } from "react-router-dom";
 import { RootState, Collection } from "../../interfaces";
 
 import CollectionItem from "../../components/collection-item";
-import { selectCollection } from "../../redux/shop/shop.selectors";
+import { selectCollection } from "../../redux/shop/selectors";
 
 import "./collection.styles.scss";
 

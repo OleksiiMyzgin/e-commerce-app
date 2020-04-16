@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 
-import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
+import { fetchCollectionsStart } from "../../redux/shop/actions";
 import Spinner from "../../components/spinner";
 
 const CollectionsOverview = lazy(() =>

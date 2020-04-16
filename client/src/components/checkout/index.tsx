@@ -7,10 +7,7 @@ import { RootState, TCartItem } from "../../interfaces";
 import CheckoutItem from "../checkout-item";
 import StripeCheckoutButton from "../stripe-button";
 
-import {
-  selectCartItems,
-  selectCartTotal,
-} from "../../redux/cart/cart.selectors";
+import { selectCartItems, selectCartTotal } from "../../redux/cart/selectors";
 
 import "./checkout.styles.scss";
 

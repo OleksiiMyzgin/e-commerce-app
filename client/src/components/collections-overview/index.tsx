@@ -4,7 +4,7 @@ import { compose } from "redux";
 
 import { RootState } from "../../interfaces";
 
-import { selectIsCollectionFetching } from "../../redux/shop/shop.selectors";
+import { selectIsCollectionFetching } from "../../redux/shop/selectors";
 import WithSpinner from "../with-spinner/";
 import CollectionsOverview from "./component";
 
