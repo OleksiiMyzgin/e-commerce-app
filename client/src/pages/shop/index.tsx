@@ -25,7 +25,7 @@ const ShopPage = ({ fetchCollectionsStart, match }: Props) => {
 
   return (
     <div className="shop-page">
-      <Suspense fallback={Spinner}>
+      <Suspense fallback={<Spinner />}>
         <Route exact path={`${match.path}`} component={CollectionsOverview} />
         <Route
           path={`${match.path}/:collectionId`}
